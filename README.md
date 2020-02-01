@@ -73,3 +73,26 @@ sum()
 ## 4.5元组
 Python将不能修改的值称为不可变的，而不可变的列表称为列表
 虽然不能修改元组的元素，但是可以给存储元组的变量赋值。
+
+# 第六章：字典
+字典是一系列键值对
+### 6.2.1 访问字典中的值
+要获取与键相关联的值，可一次指定字典名和放在方括号内的键
+
+### 6.2.5 删除键值对
+```
+alien_0 = {'color':'green','points':5}
+print(alien_0)
+del alien_0['points']
+print(alien_0)
+```
+
+### 6.3.1遍历所有的键值-对
+`for key, value in user_0.items():`
+
+### 6.3.2 遍历所有键
+`for name in favorite_languages.keys():`
+上述方式使用keys()函数来获取键，也可以使用
+
+### 6.3.4遍历字典中的所有值
+`for language in favorite_languages.values():`
