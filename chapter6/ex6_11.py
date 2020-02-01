@@ -6,7 +6,8 @@ beijing = {'country':'中国', 'population':'2000000', 'fact': '开国大典'}
 shanghai = {'country':'中国', 'population':'3000000' , 'fact':'几百位教授一致通过'}
 hangzhou = {'country':'中国', 'population':'40000000', 'fact':'断桥残雪'}
 cities = {'beijing':beijing, 'shanghai':shanghai , 'hangzhou' :hangzhou}
-for city in cities.values():
+for city in cities.values()
+:
     print(city['country'])
     print(city['population'])
     print(city['fact'])
