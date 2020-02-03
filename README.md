@@ -96,3 +96,25 @@ print(alien_0)
 
 ### 6.3.4遍历字典中的所有值
 `for language in favorite_languages.values():`
+
+# 第8章：函数
+###8.1.2 实参和形参
+在定义函数greet_user()中，username是一个形参，函数完成其工作所需的一项信息
+suye是一个实参，实参是调用函数时传给函数的信息。
+```
+def greet_user(username):
+    """显示简单的问候语"""
+    print("Hello," + username.title() + "!")
+greet_user('suye')
+```
+
+### 8.2.1 位置实参
+调用函数时，Python必须将函数调用中的每个实参关联到函数定义中的一个形参。
+最简单的关联方式是基于实参的顺序。这种关联方式被称为位置实参
+
+### 8.2.2 关键字实参
+关键字实参是在实参中将名称和值关联起来。因此向函数传递实参时不会混淆
+所以关键字实参的顺序无关紧要
+`describe_pet(animal_type='hamster', pet_name = 'harry')`
+
+
