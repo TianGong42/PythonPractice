@@ -116,5 +116,24 @@ greet_user('suye')
 关键字实参是在实参中将名称和值关联起来。因此向函数传递实参时不会混淆
 所以关键字实参的顺序无关紧要
 `describe_pet(animal_type='hamster', pet_name = 'harry')`
+### 8.4.2 禁止修改列表
+有时候，需要禁止函数修改列表
+为了解决这个问题，可向函数传递列表的副本而不是原件
+这样函数所做的任何修改都只影响副本，而丝毫不影响原件
+```function_name(list_name[:])```
+
+## 8.5 传递任意数量的实参
+有时候，你预先不知道函数需要接受多少个实参，但python允许函数从调用语句中收集
+任意数量的实参
+```
+def make_pizza(*toppings):
+    """打印顾客点的所有配料"""
+    print(toppings)
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+```
+形参名*toppings中的星号让Python创建一个名为toppings的空元组,
+并将受到的所有值都封装到这个元组中
+
 
 
