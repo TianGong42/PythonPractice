@@ -41,6 +41,9 @@ class Battery():
         message = "这车大概可以行使 " + str(range)
         message += " 公里在整个里程."
         print(message)
+    def upgrade_battery(self):
+        if self.battery_size != 85:
+            self.battery_size = 85
 class ElectricCar(Car):
     """
     电动车的独特之处
@@ -51,6 +54,7 @@ class ElectricCar(Car):
         super().__init__(make, model, year)
         self.battery = Battery()
     
+"""
 my_new_car = Car('audi', 'a4', 2016)
 print(my_new_car.get_descriptive_name())       
 my_new_car.read_odometer() 
@@ -68,3 +72,6 @@ my_tesal = ElectricCar('tesla', 'model s', 2016)
 print(my_tesal.get_descriptive_name())    # 直接调用父类的方法
 my_tesal.battery.describe_battery()
 my_tesal.battery.get_range()
+my_tesal.battery.upgrade_battery()
+my_tesal.battery.get_range()
+"""

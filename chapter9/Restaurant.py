@@ -23,6 +23,14 @@ class Restaurant():
             print("就餐人数不能是负数喔")
         else:
             self.number_served += number
+
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = []
+    def show_IceCream(self):
+        for flavor in self.flavors:
+            print(flavor) 
 hdl = Restaurant("海底捞","火锅")
 print(hdl.restaurant_name)
 print(hdl.cuisine_type)
@@ -34,5 +42,9 @@ hdl.show_number_served()
 hdl.increment_number_served(10)
 hdl.show_number_served()
 hdl.increment_number_served(-10)
+print("-------冰淇淋分割线--------")
+ices = IceCreamStand("冰淇淋小屋","冰淇淋")
+ices.flavors = ["草莓","蓝莓","芒果"]
+ices.show_IceCream()
 
 
