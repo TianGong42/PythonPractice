@@ -145,4 +145,60 @@ __init__()是一个特殊的方法，每当类创建一个新势力时，Python�
 我们将通过实参向类传递其他属性；self会自动传递，因此我们不需要传递它。
 
 
+# 第十章：文件和异常
+### 10.1.1 读取整个文件
+```
+with open('pi_digits.txt') as file_object:
+```
+首先使用open()方法打开txt文本，作为一个文件的对象。这样我们就可以愉快的使用文件对象了。
+with关键字不再需要访问文件后将其关闭。我理解为类似于java垃圾自动回收策略。
+这样不需要人为的去控制文件什么时候打开和关闭
+
+
+### 10.1.3 逐行读取
+可以使用for循环来逐行读取文件对象
+
+## 10.2 写入文件
+保存数据的最简单的方式之一是将其写入到文件中
+
+### 10.2.1写入空文件
+```
+with open(filename, 'w') as file_object:
+    file_object.write("I love programming.")
+```
+调用open()方法，提供一个实参，告诉Python你要写入打开的文件。
+第二个实参w告诉Python，我们要以写入模式打开这个文件。如果这个文件不存在，open()将自动创建。
+如果指定的文件已经存在，Python将在返回文件对象前清空文件。
+读取模式('r')
+写入模式('w')
+附加模式('a'):附加模式不会清空原有的文本
+读取和写入模式('r+')
+
+## 10.3 异常
+Python使用被称为异常的特殊对象来管理程序执行期间发生的错误。
+每当发生让Python不知所措的错误时，它都会创建一个异常对象。
+如果你编写了处理该异常的代码，程序将继续运行；
+如果你未对异常进行处理，程序将停止，并显示一个traceback，其中包含有异常的报告。
+
+## 13.3.1 处理ZeroDivisionError异常
+```
+try:
+        answer = int(first_number) / int(second_number)
+    except ZeroDivisionError:
+        print("You can't divide by 0!")
+    else:
+        print(answer)
+```
+try-except-else代码块的工作原理大致如下：Python尝试执行try代码块中的代码；
+只有可能引发异常的代码才需要放在try语句中。有时候，有一些仅在try代码块成功执行时
+才需要运行的代码；这些代码应放在else代码块中。except代码块告诉Python，如果它尝试try
+代码块中的代码时引发了指定的异常，该怎么办。
+
+## 10.4存储数据
+函数json.dump()来存储这个数据，使用json.load()来使用这个数据
+
+
+
+
+
 
